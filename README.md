@@ -1,5 +1,31 @@
 # vue-recaptcha-firebase
 
+## Require edit files
+* functions/src/index.ts
+
+```typescript
+    const secret = "secret";    // set your reCAPTCHA secret key
+```
+
+* src/main.ts
+```typescript
+firebase.initializeApp({
+    // set your firebase project settings
+})
+```
+
+* src/components/reCAPTCHAUI.vue
+```typescript
+  private siteKey = "site-key";     // set your reCAPTCHA site key
+```
+
+## deploy Firebase Cloud Functions
+```
+cd functions
+yarn install
+firebase deploy --only functions
+```
+
 ## Project setup
 ```
 yarn install
